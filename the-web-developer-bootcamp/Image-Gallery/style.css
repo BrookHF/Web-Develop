@@ -1,7 +1,34 @@
 .navbar{
-  /*background: black;*/
+  background: #d4d4d4;
+}
+
+.navbar-nav .mr-auto{
+  float:right;
 }
 
 img{
   width: 100%;
+}
+
+.img-thumbnail{
+  margin-bottom: 20px;
+}
+
+.jumbotron{
+  margin-top: 20px;
+}
+
+.lead{
+  margin-top: 20px;
+}
+
+footer {
+    padding-top: 20px;
+    border-top: 2px solid #332e20;
+    background-color: lightgray;
+}
+
+#footer-text{
+  text-align: center;
+  padding: 30px;
 }
