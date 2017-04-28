@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Color Toggle</title>
+
+	<style type="text/css">
+	.purple {
+		background: purple;
+	}
+	</style>
+
+</head>
+<body>
+	<button>CLICK ME</button>
+
+	<script type="text/javascript">
+		var button = document.querySelector("button");
+		button.addEventListener("click", function(){
+			document.body.classList.toggle("purple");
+		});
+	</script>
+</body>
+</html>
