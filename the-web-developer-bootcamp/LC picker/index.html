@@ -1,19 +1,28 @@
 <html>
   <head>
-    <title>LC picker</title>
+    <title>LC Question picker</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+    integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <h1>randomly generate a questiom number</h1>
-    <h2>0</h2>
-    <button id="generate-button">generate</button>
-    <h2>From <span id="left-number">0</span> to <span id="right-number">0</span></h2>
-    <form>
-      <input type="number" name="email" placeholder="From">
-      <button id="left-button">Ok</button>
-      <input type="number" name="email" placeholder="to">
-      <button id="right-button">Ok</button>
-    </form>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-3">LC Question Picker</h1>
+        <p class="lead">Randomly generate a questiom number!</p>
+        <hr class="my-4">
+        <h2 class="display-2" id="result">0</h2>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#" role="button" id="generate-button">Generate</a>
+        </p>
+        <form>
+          <div class="input-group mb-2 mr-sm-2 mb-sm-0 center">
+            <input type="number" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="From">
+            <input type="number" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="to">
+          </div>
+        </form>
+      </div>
+    </div>
 
     <script type="text/javascript" src="script.js"></script>
   </body>

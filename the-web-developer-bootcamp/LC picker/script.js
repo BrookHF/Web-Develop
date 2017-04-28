@@ -1,14 +1,22 @@
-var leftNum = 0;
-var rightNum = 0;
-var result = 0;
-var leftDisplay = document.querySelector("#left-number");
-var rightDisplay = document.querySelector("#right-number");
-var leftButtom = document.querySelector("#left-button");
-var rightButtom = document.querySelector("#right-button");
+var leftNum;
+var rightNum;
+var result;
 var generateButtom = document.querySelector("#generate-button");
-var questionNumber = document.querySelector("h1");
+var questionNumber = document.querySelector("#result");
 
-leftDisplay.addEventListener("click", function(){
-  leftNum = document.getElementsByTagName("input")[0].valueAsNumber;
-  leftDisplay.innerText=leftNum;
+generateButtom.addEventListener("click", function(){
+  inputs = document.querySelectorAll("input");
+  leftNum = inputs[0].valueAsNumber;
+  rightNum = inputs[1].valueAsNumber;
+  if(inputs[0]=="" || inputs[1]==""){
+    alert("Need numbers in two form");
+    return;
+  }
+  if(leftNum<0 || rightNum<0){
+    alert("Need to be positive numbers");
+    return;
+  }
+  var range = rightNum - leftNum;
+  result = Math.floor(Math.random() * (rightNum - leftNum + 1)) + leftNum;
+  questionNumber.textContent = result;
 });
