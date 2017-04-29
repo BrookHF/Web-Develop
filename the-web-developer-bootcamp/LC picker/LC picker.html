@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <title>LC Question picker</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+    integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <style rel="stylesheet" type="text/css">
+      body{
+        text-align: center;
+      }
+
+      .container{
+        padding-top: 20px;
+      }
+
+      #result{
+        margin-bottom: 30px;
+      }
+
+      .input-group{
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-3">LC Question Picker</h1>
+        <p class="lead">Randomly generate a questiom number!</p>
+        <hr class="my-4">
+        <h2 class="display-2" id="result">0</h2>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#" role="button" id="generate-button">Generate</a>
+        </p>
+        <form>
+          <div class="input-group mb-2 mr-sm-2 mb-sm-0 center">
+            <input type="number" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="From">
+            <input type="number" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="to">
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var leftNum;
+      var rightNum;
+      var result;
+      var generateButtom = document.querySelector("#generate-button");
+      var questionNumber = document.querySelector("#result");
+
+      generateButtom.addEventListener("click", function(){
+        inputs = document.querySelectorAll("input");
+        leftNum = inputs[0].valueAsNumber;
+        rightNum = inputs[1].valueAsNumber;
+        if(inputs[0]=="" || inputs[1]==""){
+          alert("Need numbers in two form");
+          return;
+        }
+        if(leftNum<0 || rightNum<0){
+          alert("Need to be positive numbers");
+          return;
+        }
+        var range = rightNum - leftNum;
+        result = Math.floor(Math.random() * (rightNum - leftNum + 1)) + leftNum;
+        questionNumber.textContent = result;
+      });
+    </script>
+  </body>
+</html>
